@@ -1,0 +1,103 @@
+:root {
+   --main-color: #333333;
+   --secondary-color: #9EAAB4;
+   --hover-color: #00000056;
+   --accent-color: rgb(255, 174, 0);
+}
+
+
+.Container{
+   display: flex;
+}
+
+.NotesListContainer{
+   border: 1px solid var(--secondary-color);
+width: 40%;
+height: 100vh;
+   padding: 10px;
+   overflow: auto;
+}
+
+.TextareaContainer {
+  border: 1px solid var(--secondary-color);
+width: 60%;
+height: 100vh;
+ overflow: auto;
+padding:  10px;
+border-left: none;
+}
+
+.NotesList {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.NoteDiv {
+   border-bottom: 1px solid var(--secondary-color);
+   padding: 5px;
+   overflow: auto;
+}
+
+.NoteListElement:hover{
+   cursor: pointer;
+}
+
+.NoteListElement {
+   margin-top: 5px;
+      height: 70px;
+      position: relative;
+      padding-left: 30px;
+}
+
+
+.NoteContent {
+word-break: break-all;
+   margin-top: 0;
+   margin-bottom: 5px;
+}
+
+.NoteTag {
+   word-break: break-all;
+     margin-top: 0;
+ margin-bottom: 3px;
+ color: var(--accent-color);
+}
+
+.DeleteNoteButton{
+cursor: pointer;
+border-radius: 50%;
+  background-color: inherit;
+outline: none;
+border: 1px solid var(--main-color);
+width: 25px;
+height: 25px;
+position: absolute;
+top: 0;
+left: -5px;
+
+}
+
+.InputDiv{
+margin-bottom: 10px;
+}
+
+.Input {
+width: 80%;
+padding: 15px;
+padding-left: 35px;
+border: none;
+outline: none;
+ font-size: 16px;
+   font-weight: normal;
+ line-height: 16px;
+}
+
+
+.placeholder {
+   color: var(--main-color);
+}
+
+.NoteDivFocus{ 
+border-bottom: 1px solid var(--accent-color);
+}
