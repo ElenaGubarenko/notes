@@ -58,8 +58,8 @@ export default function NotesList() {
   }
 
   if (componentUpdate) {
-    setComponentUpdate(false)
-    setCleanTextarea(false)
+      setComponentUpdate(false)
+      setCleanTextarea(false)    
   }
 
   return (

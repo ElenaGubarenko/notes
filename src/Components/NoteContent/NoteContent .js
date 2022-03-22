@@ -62,7 +62,6 @@ export default function NoteContent({ cleanProps, cleanTextarea, updateComponent
 
     setTextareaValue("")
     updateComponent(true)
-    updateComponent(true)
   }
 
   const handleTextarea = (e) => {

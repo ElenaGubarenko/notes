@@ -2,24 +2,29 @@
   "notes": [
     {
       "id": 1,
-      "content": "bread, butter, milk, #shop #dinner",
+      "content": "bread, butter, milk, #shop #dinner #food",
       "tags": [
         "#shop",
-        "#dinner"
+        "#dinner",
+        "#food"
       ]
     },
     {
       "id": 2,
-      "content": "go to #shop",
+      "content": "go to #shop #food #dinner",
       "tags": [
-        "#shop"
+        "#shop",
+        "#food",
+        "#dinner"
       ]
     },
     {
       "id": 3,
-      "content": "read the #book",
+      "content": "read the #book #close #read",
       "tags": [
-        "#book"
+        "#book",
+        "#close",
+        "#read"
       ]
     },
     {
@@ -32,28 +37,19 @@
       "id": 14
     },
     {
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis reiciendis minima sint placeat magni sapiente. Nihil voluptas, saepe veritatis illo necessitatibus, rem voluptatibus cupiditate, inventore esse accusamus id eos fuga.\n\n",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis reiciendis minima sint placeat magni sapiente. Nihil voluptas, saepe veritatis illo necessitatibus, rem voluptatibus cupiditate, inventore esse accusamus id eos fuga.\n#ok\n",
       "tags": [],
       "id": 15
     },
     {
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis reiciendis minima sint placeat magni sapiente. Nihil voluptas, saepe veritatis illo necessitatibus, rem voluptatibus cupiditate, inventore esse accusamus id eos fuga.\n\n",
-      "tags": [],
-      "id": 17
-    },
-    {
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis reiciendis minima sint placeat magni sapiente. Nihil voluptas, saepe veritatis illo necessitatibus, rem voluptatibus cupiditate, inventore esse accusamus id eos fuga.\n\n",
-      "tags": [],
-      "id": 19
-    },
-    {
-      "content": "hello how are youb #la #lo #lu",
+      "content": "Почитать #книгу сегодня #ok #today today",
       "tags": [
-        "#la",
-        "#lo",
-        "#lu"
+        "#книгу",
+        "#ok",
+        "#today",
+        "#книга"
       ],
-      "id": 21
+      "id": 16
     }
   ]
 }
