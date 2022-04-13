@@ -12,14 +12,19 @@ export default function NotesList() {
   const [cleanTextarea, setCleanTextarea] = useState(false)
 
   useEffect(() => {
-    Api.getNotes().then((res) => {
-      setNotes(res)
-      setNotesToFilter(res)
-    })
+    Api.getNotes()
+      .then((res) => {
+        // console.log(res)
+        setNotes(res)
+        setNotesToFilter(res)
+      })
+      .catch((err) => console.log(err))
   }, [])
 
   if (componentUpdate) {
-    Api.getNotes().then((res) => setNotes(res))
+    Api.getNotes()
+      .then((res) => setNotes(res))
+      .catch((err) => console.log(err))
   }
 
   if (cleanTextarea) {
@@ -48,18 +53,19 @@ export default function NotesList() {
 
   const findNote = (e) => {
     notesToFilter.map((note) =>
-      note.tags.map((tag) => {
-        if (tag.includes(e.target.value)) {
+      note.content.split(" ").map((element) => {
+        if (element.includes(e.target.value)) {
           arr.push(note)
         }
+        arr = [...new Set(arr)]
         setNotes(arr)
       })
     )
   }
 
   if (componentUpdate) {
-      setComponentUpdate(false)
-      setCleanTextarea(false)    
+    setComponentUpdate(false)
+    setCleanTextarea(false)
   }
 
   return (

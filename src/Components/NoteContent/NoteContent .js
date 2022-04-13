@@ -53,10 +53,10 @@ export default function NoteContent({ cleanProps, cleanTextarea, updateComponent
 
     if (!id) {
       const toPost = {
-        id: Date.now,
         content: textareaValue,
-        tags: [...arr],
+        tags: arr.length > 0 ? [...arr] : "",
       }
+      // console.log(toPost)
       Api.postNote(toPost)
     }
 
