@@ -35,18 +35,18 @@ export default function NoteContent({ cleanProps, cleanTextarea, updateComponent
       if (note.tags.length === 0) {
         const toUpdate = {
           content: textareaValue,
-          tags: [...arr],
+          tags: [...arr].join(" "),
         }
         Api.patchNote(id, toUpdate)
       }
 
       if (note.tags.length > 0) {
-        arr = [...arr, ...note.tags]
         const uniqueTags = new Set(arr)
         const toUpdate = {
           content: textareaValue,
-          tags: [...uniqueTags],
+          tags: [...uniqueTags].join(" "),
         }
+        console.log("toUpdate", toUpdate)
         Api.patchNote(id, toUpdate)
       }
     }
@@ -54,19 +54,16 @@ export default function NoteContent({ cleanProps, cleanTextarea, updateComponent
     if (!id) {
       const toPost = {
         content: textareaValue,
-        tags: arr.length > 0 ? [...arr] : "",
+        tags: arr.length > 0 ? [...arr].join(" ") : "",
       }
-      // console.log(toPost)
       Api.postNote(toPost)
     }
-
     setTextareaValue("")
     updateComponent(true)
   }
 
   const handleTextarea = (e) => {
     setTextareaValue(e.target.value)
-    // setTextareaValue(e.target.textContent)
   }
 
   const clean = () => {

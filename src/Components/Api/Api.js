@@ -7,6 +7,7 @@ async function getNotes() {
 }
 
 async function patchNote(id, data) {
+  console.log(data)
   const response = await fetch(`https://crud-back-elena-gubarenko.herokuapp.com/notes?id=${id}`, {
     method: "PATCH",
     headers: {
